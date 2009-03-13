@@ -22,7 +22,6 @@ require File.expand_path(File.dirname(__FILE__)+'/models/user')
 require File.expand_path(File.dirname(__FILE__)+'/models/consumer')
 require File.expand_path(File.dirname(__FILE__)+'/sinatra/hancock/defaults')
 require File.expand_path(File.dirname(__FILE__)+'/sinatra/hancock/sessions')
-require File.expand_path(File.dirname(__FILE__)+'/sinatra/hancock/users')
 require File.expand_path(File.dirname(__FILE__)+'/sinatra/hancock/openid_server')
 
 module Hancock
@@ -31,7 +30,6 @@ module Hancock
 
     register Sinatra::Hancock::Defaults
     register Sinatra::Hancock::Sessions
-    register Sinatra::Hancock::Users
     register Sinatra::Hancock::OpenIDServer
   end
 end

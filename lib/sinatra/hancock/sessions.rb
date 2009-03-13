@@ -21,7 +21,7 @@ module Sinatra
       %br
     %input{:type => 'submit', :value => 'Login'}
     or
-    %a{:href => '/sso/signup'} Signup
+    %a{:href => '/users/new'} Signup
 HAML
           if trust_root = session['return_to'] || params['return_to']
             if ::Hancock::Consumer.allowed?(trust_root)
