@@ -26,6 +26,12 @@ require File.expand_path(File.dirname(__FILE__)+'/sinatra/hancock/openid_server'
 
 module Hancock
   class App < Sinatra::Default
+    def self.signup_path
+      @signup_path ||= '/users/new'
+    end
+    def self.signup_path=(value)
+      @signup_path = value
+    end
     enable :sessions
 
     register Sinatra::Hancock::Defaults
