@@ -24,7 +24,6 @@ Your Rackup File
 
     class OneLove < Hancock::App
       set :views,  'views'
-      set :public, 'public'
 
       get '/' do
         redirect '/sso/login' unless session['hancock_server_user_id']
