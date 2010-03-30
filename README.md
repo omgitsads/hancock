@@ -22,7 +22,7 @@ Your Rackup File
 
     DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}/development.db")
 
-    class OneLove < Hancock::App
+    class OneLove < Hancock::SSO::App
       set :views,  'views'
       set :public, 'public'
 
